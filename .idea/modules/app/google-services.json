@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "669315034846",
+    "project_id": "friends-a6abf",
+    "storage_bucket": "friends-a6abf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669315034846:android:700cc2e4e3a23033ef5c4f",
+        "android_client_info": {
+          "package_name": "com.samo.friends"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669315034846-bii5o7bf271bnq3banqvnp67equ7ekqc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.samo.friends",
+            "certificate_hash": "f5673285384e5ba9e97abb0bf28d7314dcbb0473"
+          }
+        },
+        {
+          "client_id": "669315034846-c23t17h19vrtb2plilramda8ks2s3fen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAvCFyylXSP2RCKfGhbtOheG0FSAeisgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669315034846-c23t17h19vrtb2plilramda8ks2s3fen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

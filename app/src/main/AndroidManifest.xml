@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.samok.friends">
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/friends_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.samok.friends.views.DetailsActivity">
+        </activity>
+        <activity android:name="com.samok.friends.views.UploadActivity" />
+        <activity android:name="com.samok.friends.authentication.ForgotPassword" />
+        <activity android:name="com.samok.friends.authentication.SignUpActivity" />
+        <activity android:name="com.samok.friends.authentication.LoginActivity" />
+        <activity android:name="com.samok.friends.views.ViewActivity" />
+        <activity android:name="com.samok.friends.SelectionChoice" />
+        <activity android:name="com.samok.friends.IntroSlider" />
+        <activity android:name="com.samok.friends.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Friends</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content">A good friend is a priceless gem. Find one, keep them forever! Friends allows you to note down qualities from your friends that you like most and those that may not be so appealing. </string>
+    <string name="addFriend">Add Friend</string>
+    <string name="view">View Friends</string>
+    <string name="login">LOGIN</string>
+    <string name="forgotpass">Forgot Password</string>
+    <string name="donthave">Don\'t have an account?</string>
+    <string name="createacc">CREATE ACCOUNT</string>
+    <string name="rem">Remembered Password</string>
+    <string name="name">Friend\'s Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="contentb">The app thus helps you remember how good your friends are and also allows you to rate friendships. In case you are in trouble as well, say an accident, anyone can easily open your app and view your friends along with their contact details and easily call them over to help you. </string>
+    <string name="loginsc">Back To Login</string>
+    <string name="contentc">Friends also lets you share \'plot\' with your close friends on the go! It is simple to simply send them an sms, email or call them directly via this app.</string>
+</resources>
