@@ -30,8 +30,8 @@ public class IntroSlider extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new SliderB()).commit();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new SliderC()).commit();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                new SliderC()).commit();
     }
 
 //    public void next(View v){
