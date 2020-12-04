@@ -58,8 +58,6 @@ public class DetailsActivity extends AppCompatActivity {
             Toast.makeText(this, "No shared image ", Toast.LENGTH_SHORT).show();
         }
 
-
-
         //set text
         text_name.setText(name);
         text_friend_period.setText(friendPeriod);

@@ -23,15 +23,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ViewActivity extends AppCompatActivity {
-    //declare the recyclerview
+    //Declare the recyclerview.
     RecyclerView recyclerView;
     private ProgressBar mProgressCircle;
-    //declare the adapter
+    // Declare the adapter.
     ViewAdapter viewAdapter;
 
-    //arrayList
+    //ArrayList
     List<ViewActivityModel> viewActivityModels;
-    //database ref
+    //Database reference.
     private DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,50 +40,44 @@ public class ViewActivity extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference("uploadDetails");
 
-
-        //instance of list as an arrayListr
+        //Instance of list as an arrayList.
         viewActivityModels =  new ArrayList<>();
-
 
         mProgressCircle = findViewById(R.id.progress_circle);
 
-        //find the view by id
-        //intializing the views
+        //Finding the view by id.
+        //Initializing the views.
         recyclerView = findViewById(R.id.recyclerProperty);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-
-        //reading details in firebase
+        //Reading details in firebase.
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
-            //DataSnapshot contains the records in your firebase
+            //DataSnapshot contains the records in my firebase.
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //for loop to iterate the datasnapshot
+                //For loop to iterate the data snapshot.
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     ViewActivityModel viewActivityModel = snapshot.getValue(ViewActivityModel.class);
-                    //adding records to my list
-                    //clear list
+                    //Adding records to my list.
+                    //Clear list.
                     viewActivityModels.clear();
                     viewActivityModels.add(viewActivityModel);
                 }
-
-                //set the details to adapter
-                viewAdapter = new ViewAdapter(ViewActivity.this, (ArrayList<ViewActivityModel>) viewActivityModels);
+                //Set the details to adapter.
+                viewAdapter = new ViewAdapter(ViewActivity.this, viewActivityModels);
                 viewAdapter.notifyDataSetChanged(); //
-                //set the adapter to recyclerview
+                //Set the adapter to recyclerview.
                 recyclerView.setAdapter(viewAdapter);
-                recyclerView.invalidate(); //to refresh the recyclerview
+//                Refreshing the recyclerview.
+                recyclerView.invalidate();
                 mProgressCircle.setVisibility(View.INVISIBLE);
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(ViewActivity.this, "Something went wrong try again later " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
                 mProgressCircle.setVisibility(View.INVISIBLE);
-
             }
         });
 

@@ -6,6 +6,7 @@ public class ViewActivityModel {
     private String friendName;
     private String phone;
     private String email;
+/*
 
     public String getFriendLocation() {
         return friendLocation;
@@ -14,6 +15,7 @@ public class ViewActivityModel {
     public void setFriendLocation(String friendLocation) {
         this.friendLocation = friendLocation;
     }
+*/
 
     private String friendLocation;
     private String friendDesc;
@@ -26,11 +28,12 @@ public class ViewActivityModel {
     }
 
     //constructor
-    public ViewActivityModel(String id, String friendName, String phone, String email, String friendDesc, String friendPeriod, String friendPhoto){
+    public ViewActivityModel(String id, String friendName, String phone, String email, String friendLocation, String friendDesc, String friendPeriod){
         this.id = id;
         this.friendName = friendName;
         this.phone = phone;
         this.email = email;
+        this.friendLocation = friendLocation;
         this.friendDesc = friendDesc;
         this.friendPeriod = friendPeriod;
         this.friendPhoto = friendPhoto;
@@ -92,5 +95,13 @@ public class ViewActivityModel {
 
     public void setFriendPhoto(String friendPhoto) {
         this.friendPhoto = friendPhoto;
+    }
+
+    public String getFriendLocation() {
+        return friendLocation;
+    }
+
+    public void setFriendLocation(String friendLocation) {
+        this.friendLocation = friendLocation;
     }
 }

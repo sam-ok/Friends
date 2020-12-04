@@ -33,9 +33,9 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        //intialize our firebaseapp
+        //initialize our firebaseapp
         FirebaseApp.initializeApp(this);
-        //intialize our Firebase Auth
+        //initialize our Firebase Auth
         auth = FirebaseAuth.getInstance();
 
         //find ref
@@ -87,7 +87,7 @@ public class SignUpActivity extends AppCompatActivity {
     private void run(String signed_email, String signed_pass) {
         //if the above checks are satisfied
         //create the user
-        //firebase method ,createUserWithEmailAndPassword()
+//        firebase method ,createUserWithEmailAndPassword()
         //show the progress indication
         progressBar.setVisibility(View.VISIBLE);
         //create user

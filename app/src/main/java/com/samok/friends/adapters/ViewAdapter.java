@@ -15,13 +15,13 @@ import com.samok.friends.R;
 import com.samok.friends.models.ViewActivityModel;
 import com.samok.friends.views.DetailsActivity;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolderAdapter> {
     Context context;
-    ArrayList<ViewActivityModel> viewActivityModels;
+    List<ViewActivityModel> viewActivityModels;
 
-    public ViewAdapter(Context context, ArrayList<ViewActivityModel> viewActivityModels1){
+    public ViewAdapter(Context context, List<ViewActivityModel> viewActivityModels1){
         this.context = context;
         this.viewActivityModels = viewActivityModels1;
 
