@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#2196F3"
+    android:background="#03A9F4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.ViewActivity">
@@ -17,66 +17,19 @@
         android:id="@+id/image"
         />
 
-    <ImageView
+        <ProgressBar
+        android:id="@+id/progress_circle"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_below="@id/image"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_margin="20dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/friendImage"
-        tools:src="@drawable/photo" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/friendImage"
-        android:layout_centerHorizontal="true"
-        android:textColor="#fff"
-        android:text="Joseph Bill" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_below="@id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textColor="#fff"
-        android:text="0773571607" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textColor="#fff"
-        android:layout_below="@id/textView2"
-        android:text="Nairobi" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView3"
-        android:layout_centerHorizontal="true"
-        android:textColor="#fff"
-        android:background="#E91E63"
-        android:text="See More" />
-
-
-    <!--    <ProgressBar-->
-<!--        android:id="@+id/progress_circle"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerInParent="true" />-->
-
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_margin="20dp"-->
-<!--        android:layout_below="@+id/image"-->
-<!--        android:id="@+id/recyclerProperty"-->
-<!--        />-->
+        android:layout_below="@+id/image"
+        android:id="@+id/recyclerProperty"
+        />
 
 
 </RelativeLayout>

@@ -29,12 +29,9 @@ public class IntroSlider extends AppCompatActivity {
     public void next(View v){
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new SliderB()).commit();
-
-//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-//                new SliderC()).commit();
     }
-
-//    public void next(View v){
+//
+//    public void next1(View v){
 //        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
 //                new SliderC()).commit();
 //    }

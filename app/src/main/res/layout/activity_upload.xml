@@ -10,8 +10,7 @@
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
->
+        android:layout_height="wrap_content">
 
         <ProgressBar
             android:id="@+id/progress_bar"
@@ -31,7 +30,6 @@
             android:layout_marginTop="20dp"
             android:id="@+id/image"
             />
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -71,9 +69,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Friend's Email Address "
-                android:inputType="textEmailAddress"
-                android:id="@+id/email"
+                android:hint="Enter Friend's Phone Number "
+                android:inputType="number"
+                android:id="@+id/phone"
                 android:textColorHint="#000"
                 android:backgroundTint="#000"
                 />
@@ -94,13 +92,33 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Friend's Phone Number "
-                android:inputType="number"
-                android:id="@+id/phone"
+                android:hint="Enter Friend's Email Address "
+                android:inputType="textEmailAddress"
+                android:id="@+id/email"
                 android:textColorHint="#000"
                 android:backgroundTint="#000"
                 />
         </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginStart="26dp"-->
+<!--            android:layout_marginEnd="26dp"-->
+<!--            android:textColorHint="#000"-->
+<!--            android:id="@+id/textInput4"-->
+<!--            android:backgroundTint="#000"-->
+<!--            android:layout_below="@+id/textInput3"-->
+<!--            android:layout_marginTop="10dp">-->
+
+<!--            <Spinner-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/friend_nickname"-->
+<!--                />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -114,30 +132,10 @@
             android:layout_below="@+id/textInput3"
             android:layout_marginTop="10dp">
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/friend_nickname"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="26dp"
-            android:layout_marginEnd="26dp"
-            android:textColorHint="#000"
-            android:id="@+id/textInput5"
-            android:backgroundTint="#000"
-            android:layout_below="@+id/textInput4"
-            android:layout_marginTop="10dp">
-
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Friend's Residence"
+                android:hint="@string/enter_friend_s_residence"
                 android:inputType="text"
                 android:id="@+id/location_prop"
                 android:textColorHint="#000"
@@ -152,15 +150,15 @@
             android:layout_marginStart="26dp"
             android:layout_marginEnd="26dp"
             android:textColorHint="#000"
-            android:id="@+id/textInput6"
+            android:id="@+id/textInput5"
             android:backgroundTint="#000000"
-            android:layout_below="@+id/textInput5"
+            android:layout_below="@+id/textInput4"
             android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="How long have you been friends?"
+                android:hint="@string/how_long_have_you_been_friends"
                 android:inputType="text"
                 android:id="@+id/friendPeriod"
                 android:textColorHint="#000000"
@@ -176,15 +174,15 @@
             android:layout_marginStart="26dp"
             android:layout_marginEnd="26dp"
             android:textColorHint="#000"
-            android:id="@+id/textInput7"
+            android:id="@+id/textInput6"
             android:backgroundTint="#000"
-            android:layout_below="@+id/textInput6"
+            android:layout_below="@+id/textInput5"
             android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:hint="Enter Brief Description of Your Friend"
+                android:hint="@string/enter_brief_description_of_your_friend"
                 android:inputType="text"
                 android:id="@+id/desc_prop"
                 android:textColorHint="#000000"
@@ -200,51 +198,49 @@
             android:layout_marginStart="26dp"
             android:layout_marginEnd="26dp"
             android:textColorHint="#000"
-            android:id="@+id/textInput8"
+            android:id="@+id/textInput7"
             android:backgroundTint="#000"
-            android:layout_below="@+id/textInput7"
+            android:layout_below="@+id/textInput6"
             android:layout_marginTop="10dp">
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textInput8"
+            android:layout_below="@+id/textInput7"
             android:layout_centerHorizontal="true"
             android:layout_margin="1dp"
             android:background="#2196F3"
-            android:text="Add Friend's Photo"
+            android:text="@string/add_friend_s_photo"
             android:textColor="#fff"
             android:textStyle="bold"
             android:id="@+id/chooseImage"
-
             />
 
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/chooseImage"
+            android:layout_centerHorizontal="true"
             android:layout_margin="10dp"
             android:background="#9C27B0"
-            android:layout_centerHorizontal="true"
-            android:text="View"
-            android:layout_below="@id/chooseImage"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:id="@+id/view"
-            />
-
-
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/view"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
-            android:background="#E91E63"
-            android:text="Save Friend"
+            android:text="@string/save_friend"
             android:textColor="#fff"
             android:textStyle="bold"
             android:id="@+id/btnSubmit"
+            />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#E91E63"
+            android:layout_centerHorizontal="true"
+            android:text="@string/view"
+            android:layout_below="@id/btnSubmit"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:id="@+id/view"
             android:layout_marginBottom="20dp"
             />
 

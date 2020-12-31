@@ -1,33 +1,22 @@
 package com.samok.friends.models;
 
 public class ViewActivityModel {
-    //variables
+    //Variables.
     private String id;
     private String friendName;
     private String phone;
     private String email;
-/*
-
-    public String getFriendLocation() {
-        return friendLocation;
-    }
-
-    public void setFriendLocation(String friendLocation) {
-        this.friendLocation = friendLocation;
-    }
-*/
-
     private String friendLocation;
     private String friendDesc;
     private String friendPeriod;
     private String friendPhoto;
 
-    //empty constructor
+    //Empty constructor.
     public ViewActivityModel(){
 
     }
 
-    //constructor
+    //Constructor.
     public ViewActivityModel(String id, String friendName, String phone, String email, String friendLocation, String friendDesc, String friendPeriod){
         this.id = id;
         this.friendName = friendName;
@@ -37,10 +26,8 @@ public class ViewActivityModel {
         this.friendDesc = friendDesc;
         this.friendPeriod = friendPeriod;
         this.friendPhoto = friendPhoto;
-
     }
 //    Getters and setters.
-
     public String getId() {
         return id;
     }
@@ -73,6 +60,14 @@ public class ViewActivityModel {
         this.email = email;
     }
 
+    public String getFriendLocation() {
+        return friendLocation;
+    }
+
+    public void setFriendLocation(String friendLocation) {
+        this.friendLocation = friendLocation;
+    }
+
     public String getFriendDesc() {
         return friendDesc;
     }
@@ -95,13 +90,5 @@ public class ViewActivityModel {
 
     public void setFriendPhoto(String friendPhoto) {
         this.friendPhoto = friendPhoto;
-    }
-
-    public String getFriendLocation() {
-        return friendLocation;
-    }
-
-    public void setFriendLocation(String friendLocation) {
-        this.friendLocation = friendLocation;
     }
 }

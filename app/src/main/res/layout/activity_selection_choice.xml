@@ -27,7 +27,8 @@
         android:padding="10dp"
         android:textStyle="bold"
         android:textColor="#fff"
-        android:background="#E91E63"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="#E91E63"
         android:textAllCaps="false"
         android:id="@+id/btnAddFriend"/>
 
@@ -42,7 +43,8 @@
         android:padding="10dp"
         android:textStyle="bold"
         android:textColor="#fff"
-        android:background="#2196F3"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="#2196F3"
         android:textAllCaps="false"/>
 
 </RelativeLayout>

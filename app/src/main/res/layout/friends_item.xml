@@ -39,13 +39,14 @@
             android:text="Friend's Name"
             android:textColor="#000"
             android:padding="10dp"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/imageProperty"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/locationProperty" />
+            app:layout_constraintBottom_toTopOf="@+id/phone" />
 
         <TextView
-            android:id="@+id/locationProperty"
+            android:id="@+id/phone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -54,7 +55,7 @@
             android:layout_marginBottom="24dp"
             android:padding="10dp"
             android:lineSpacingExtra="8dp"
-            android:text="Stays in?"
+            android:text="Phone Number"
             app:layout_constraintTop_toBottomOf="@+id/nameProperty"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,16 +68,17 @@
             android:layout_marginStart="160dp"
             android:layout_marginLeft="160dp"
             android:layout_marginTop="12dp"
-            android:background="#7C27B0"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/roundbutton"
+            android:backgroundTint="#7C27B0"
             android:minWidth="-2dp"
             android:paddingStart="6dp"
             android:paddingEnd="6dp"
             android:text="See More"
             android:textAllCaps="false"
             android:textColor="#fff"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/locationProperty" />
+            app:layout_constraintTop_toBottomOf="@+id/phone" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

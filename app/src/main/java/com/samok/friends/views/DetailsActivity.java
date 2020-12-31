@@ -38,20 +38,20 @@ public class DetailsActivity extends AppCompatActivity {
         imageView = findViewById(R.id.image);
 
         Intent intent = getIntent();
-        name = intent.getStringExtra("name");
-        email = intent.getStringExtra("email_property");
-        phones = intent.getStringExtra("phone_property");
-        friendDesc = intent.getStringExtra("description_property");
-        friendLocation = intent.getStringExtra("location_property");
-        friendPeriod = intent.getStringExtra("period_property");
-//        image = intent.getStringExtra("image_property");
+        name = intent.getStringExtra("friendName");
+        phones = intent.getStringExtra("phone");
+        email = intent.getStringExtra("email");
+        friendDesc = intent.getStringExtra("friendDesc");
+        friendLocation = intent.getStringExtra("friendLocation");
+        friendPeriod = intent.getStringExtra("friendPeriod");
+        image = intent.getStringExtra("friendPhoto");
 
         //fetch the image
         //u get multimedia files shared using the bundle getExtras method
         Bundle bundle = getIntent().getExtras();
 //        check if bundle has image
         if (bundle != null){
-            image = bundle.getString("image_property");
+            image = bundle.getString("friendPhoto");
             //set image to the imageview
             imageView.setImageResource(Integer.parseInt(image));
         } else {
@@ -78,7 +78,7 @@ public class DetailsActivity extends AppCompatActivity {
     public void phone(View v){
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
-            //i need to alert the user to allow the app to make a call
+            //Alerting the user to allow the app to make a call.
             ActivityCompat.requestPermissions((Activity) this,
                     new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
         } else {
@@ -88,5 +88,4 @@ public class DetailsActivity extends AppCompatActivity {
 //            startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(phone)));
         }
     }
-
 }

@@ -15,4 +15,9 @@
     <string name="contentb">The app thus helps you remember how good your friends are and also allows you to rate friendships. In case you are in trouble as well, say an accident, anyone can easily open your app and view your friends along with their contact details and easily call them over to help you. </string>
     <string name="loginsc">Back To Login</string>
     <string name="contentc">Friends also lets you share \'plot\' with your close friends on the go! It is simple to simply send them an sms, email or call them directly via this app.</string>
+    <string name="enter_brief_description_of_your_friend">Enter Brief Description of Your Friend</string>
+    <string name="how_long_have_you_been_friends">How long have you been friends?</string>
+    <string name="add_friend_s_photo">Add Friend\'s Photo</string>
+    <string name="save_friend">Save Friend</string>
+    <string name="enter_friend_s_residence">Enter Friend\'s Residence</string>
 </resources>

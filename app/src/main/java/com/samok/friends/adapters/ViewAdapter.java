@@ -27,16 +27,14 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolderAdap
 
     }
 
-
-
     public class ViewHolderAdapter extends RecyclerView.ViewHolder{
-        TextView tvFriendName, tvFriendLocation;
+        TextView tvFriendName, tvFriendPhone;
         Button btnSee;
         public ViewHolderAdapter(@NonNull View itemView){
             super(itemView);
 
             tvFriendName = itemView.findViewById(R.id.nameProperty);
-            tvFriendLocation = itemView.findViewById(R.id.locationProperty);
+            tvFriendPhone = itemView.findViewById(R.id.phone);
             btnSee = itemView.findViewById(R.id.seeMore);
         }
     }
@@ -54,24 +52,26 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolderAdap
     ViewActivityModel viewActivityModel = viewActivityModels.get(position);
 
     holder.tvFriendName.setText(viewActivityModel.getFriendName());
-    holder.tvFriendLocation.setText(viewActivityModel.getFriendLocation());
+    holder.tvFriendPhone.setText(viewActivityModel.getPhone());
     holder.btnSee.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(context, DetailsActivity.class);
-            intent.putExtra("name", viewActivityModels.get(position).getFriendName());
-            intent.putExtra("email_property", viewActivityModels.get(position).getEmail());
-            intent.putExtra("phone_property", viewActivityModels.get(position).getPhone());
-            intent.putExtra("description_property", viewActivityModels.get(position).getFriendDesc());
-            intent.putExtra("location_property", viewActivityModels.get(position).getFriendLocation());
-            intent.putExtra("period_property", viewActivityModels.get(position).getFriendPeriod());
-            intent.putExtra("image_property", viewActivityModels.get(position).getFriendPhoto());
+            intent.putExtra("friendName", viewActivityModels.get(position).getFriendName());
+            intent.putExtra("phone", viewActivityModels.get(position).getPhone());
+            intent.putExtra("email", viewActivityModels.get(position).getEmail());
+            intent.putExtra("friendLocation", viewActivityModels.get(position).getFriendLocation());
+            intent.putExtra("friendDesc", viewActivityModels.get(position).getFriendDesc());
+            intent.putExtra("friendPeriod", viewActivityModels.get(position).getFriendPeriod());
+            intent.putExtra("friendPhoto", viewActivityModels.get(position).getFriendPhoto());
+            context.startActivity(intent);
         }
     });
     }
 
     @Override
     public int getItemCount() {
+
         return 0;
     }
 }
